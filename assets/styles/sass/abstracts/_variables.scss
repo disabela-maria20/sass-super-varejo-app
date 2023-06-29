@@ -1,0 +1,30 @@
+// Color
+$primary-colors: #beba33;
+$primary-lingh-color: #fff;
+
+$secondary-colors: #701ea9;
+$primary-lingh-colors: #e4e4e4;
+$secondary-lingh-color: #e5e5e5;
+$tertiary-lingh-color: #b4b4b4;
+
+$dark-colos: #020202;
+$quaternary-indigo-colos: #201a46;
+
+$danger-color: #d62b2b;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Font
+$font-primary: "din-2014", sans-serif;
+$font-secondary: "din-2014", sans-serif;
+
+// Border Radius
+$border-radius: 10px;

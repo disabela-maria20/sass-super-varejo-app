@@ -1,0 +1,96 @@
+@use "variables" as variable;
+
+@mixin media($breakpoint) {
+  @if $breakpoint == "xs" {
+    @media (min-width: map-get(variable.$grid-breakpoints, xs)) {
+      @content;
+    }
+  } @else if $breakpoint == "sm" {
+    @media (min-width: map-get(variable.$grid-breakpoints, sm)) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media (min-width: map-get(variable.$grid-breakpoints, md)) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media (min-width: map-get(variable.$grid-breakpoints, lg)) {
+      @content;
+    }
+  } @else if $breakpoint == "xl" {
+    @media (min-width: map-get(variable.$grid-breakpoints, xl)) {
+      @content;
+    }
+  } @else if $breakpoint == "xxl" {
+    @media (min-width: map-get(variable.$grid-breakpoints, xxl)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+@mixin input {
+  background-color: $secondary-lingh-color;
+  color: $tertiary-lingh-color;
+  border: none;
+  height: 42px;
+  width: 100%;
+  border-radius: $border-radius;
+  padding: 0 15px;
+  font-size: 15px;
+  font-weight: 400;
+
+  &:focus-within {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $tertiary-lingh-color;
+  }
+  &::placeholder {
+    font-weight: 600;
+  }
+  @include media(md) {
+    font-size: 18px;
+  }
+}
+
+@mixin links {
+  color: $dark-colos !important;
+  font-weight: 900;
+  font-size: 15px;
+  transition: opacity 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include media(md) {
+    font-size: 18px;
+  }
+}
+
+@mixin paragraph($color) {
+  font-size: 15px;
+  color: $color;
+  font-weight: 400;
+  @include media(lg) {
+    font-size: 18px;
+  }
+}
+
+@mixin cta {
+  background-color: $primary-colors;
+  color: $primary-lingh-color;
+  border-radius: $border-radius;
+  padding: 5px 20px;
+  height: 42px;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+
+  &:hover {
+    background-color: darken($primary-colors, 10%);
+  }
+  &:focus-within {
+    outline: none;
+  }
+}

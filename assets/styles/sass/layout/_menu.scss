@@ -1,0 +1,192 @@
+.header {
+  .range {
+    border-top: 10px solid $primary-colors;
+
+    .aria_range {
+      padding: 55px 0;
+      display: none;
+
+      @include media(lg) {
+        display: block;
+      }
+
+      .link {
+        nav {
+          ul {
+            display: flex;
+            li {
+              margin-left: 8px;
+
+              @include media(lg) {
+                margin-left: 35px;
+              }
+              a {
+                @include links;
+              }
+            }
+          }
+          .social {
+            li {
+              margin-left: 8px;
+              display: inline;
+              &:nth-child(1) {
+                @include media(lg) {
+                  margin-left: 35px;
+                }
+              }
+              a {
+                text-align: center;
+                width: 35px;
+                height: 30px;
+                display: inline-block;
+                background: $primary-lingh-colors;
+                font-size: 20px;
+                border-radius: 5px;
+                transition: background 0.2s ease-in-out;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: $tertiary-lingh-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .area_logo {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img.logo {
+      max-width: 220px;
+      @include media(lg) {
+        margin: 0px auto;
+        display: block;
+        width: 400px;
+        max-width: initial;
+      }
+    }
+    .btn-register {
+      background-color: $primary-lingh-color;
+      border: 2px solid $dark-colos;
+      padding: 12px 20px;
+      border-radius: $border-radius;
+      display: none;
+      @include media(lg) {
+        display: block;
+        position: absolute;
+        top: -35px;
+        right: 0;
+      }
+      span {
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+    .menu-burguer {
+      width: 45px;
+      height: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      span {
+        display: block;
+        width: 100%;
+        background: $dark-colos;
+        height: 7px;
+        border-radius: 25px;
+        transition: all 400ms ease-in-out;
+
+        &.active:nth-child(1) {
+          transform: rotate(40deg) translate(10px, 10px);
+        }
+        &.active:nth-child(2) {
+          opacity: 0;
+          transform: translate(100%);
+        }
+        &.active:nth-child(3) {
+          transform: rotate(-40deg) translate(10px, -10px);
+        }
+      }
+      @include media(lg) {
+        display: none;
+      }
+    }
+  }
+  .menu {
+    background-color: $primary-lingh-color;
+    transition: all 400ms ease-in-out;
+    transform: translateX(-100%);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 3;
+    &.active {
+      transform: translateX(0);
+    }
+    @include media(lg) {
+      position: relative;
+      transform: none;
+    }
+    ul {
+      @include media(lg) {
+        display: flex;
+        justify-content: center;
+        margin: 55px 0;
+      }
+      li {
+        text-align: center;
+        margin: 20px 0;
+        .area_search {
+          @include media(lg) {
+            display: none;
+          }
+        }
+        @include media(lg) {
+          margin: 0 20px;
+        }
+        a {
+          @include links;
+        }
+
+        .cta {
+          padding: 10px 15px;
+          background-color: $secondary-colors;
+          color: $primary-lingh-color;
+          border-radius: $border-radius;
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+      .registered {
+        @include media(lg) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.area_search {
+  display: inline-flex;
+  input {
+    @include input;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    &:focus-within {
+      outline: none;
+    }
+  }
+  button {
+    background-color: $secondary-lingh-color;
+    border: none;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}

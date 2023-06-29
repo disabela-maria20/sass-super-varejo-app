@@ -1,0 +1,11 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./layout/menu";
+@import "./layout/footer";
+
+@import "./components/banner";
+
+body {
+  font-family: $font-primary !important;
+}
