@@ -83,11 +83,12 @@
   color: $primary-lingh-color;
   border-radius: $border-radius;
   padding: 5px 20px;
-  height: 42px;
   transition: background-color 0.2s ease-in-out;
   border: none;
 
   &:hover {
+    color: $primary-lingh-color;
+    text-decoration: none;
     background-color: darken($primary-colors, 10%);
   }
   &:focus-within {
