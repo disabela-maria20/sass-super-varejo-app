@@ -36,25 +36,7 @@
     }
     a {
       color: $primary-lingh-color;
-      text-transform: capitalize;
-      position: relative;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-      &::after {
-        content: "";
-        transition: all 0.2s ease-in-out;
-        position: absolute;
-        background: url(../../images/right.png);
-        width: 11px;
-        height: 8px;
-        top: 7px;
-        right: 65%;
-      }
-      &:hover::after {
-        right: 64%;
-      }
+      @include linkArrow;
     }
     h2 {
       @include subTitle;

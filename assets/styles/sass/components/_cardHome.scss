@@ -1,0 +1,36 @@
+$cores: (#a06253, #48a9c2, #4b0082, #07dbfd);
+
+@for $i from 1 through length($cores) {
+  .card_badge-#{$i} {
+    background-color: nth($cores, $i);
+  }
+}
+
+.card_home {
+  border: 1px solid $secondary-lingh-color !important;
+  border-radius: 10px !important;
+  overflow: auto;
+  .card_badge {
+    color: $primary-lingh-color;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 20px 0 40px;
+    font-weight: 700 !important;
+  }
+  a {
+    color: $secondary-colors;
+    font-weight: 600;
+    @include linkArrow();
+    &::after {
+      background-image: url("../../images/right-purple.png");
+    }
+    &:hover {
+      color: $secondary-colors !important;
+    }
+  }
+}

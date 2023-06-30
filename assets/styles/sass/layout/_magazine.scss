@@ -1,3 +1,74 @@
 .magazine {
-  background-image: url();
+  background-image: url("../../images/bg-magazine.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 75px 0;
+  color: $primary-lingh-color;
+  margin-bottom: 90px;
+
+  .magazine_title {
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $primary-lingh-color;
+    @include media(md) {
+      margin: 20px 0;
+    }
+    h2 {
+      display: inline-block;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      top: 5px;
+    }
+    span {
+      text-transform: uppercase;
+      background-color: $primary-colors;
+      padding: 5px 10px;
+      font-weight: 500;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+  }
+  p {
+    @include paragraph($primary-lingh-color);
+    font-weight: 200;
+  }
+  .magazine_link {
+    @include linkArrow;
+    color: $primary-lingh-color;
+    text-transform: initial;
+
+    @include media(md) {
+      margin-bottom: 40px;
+    }
+  }
+  .magazine_cta {
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+    color: $primary-lingh-color;
+    background-color: $primary-colors;
+    border-radius: 5px;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: background 200ms ease-in-out;
+    span {
+      display: block;
+      font-weight: 600;
+      text-transform: uppercase;
+      @include media(md) {
+        margin-right: 10px;
+        display: inline-block;
+      }
+    }
+    @include media(md) {
+      display: inline-block;
+    }
+    &:hover {
+      background-color: darken($primary-colors, 10%);
+      text-decoration: none;
+    }
+  }
 }

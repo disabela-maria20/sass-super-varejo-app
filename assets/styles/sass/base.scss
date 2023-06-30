@@ -5,9 +5,14 @@
 @import "./layout/footer";
 @import "./layout/slide";
 @import "./layout/magazine";
+@import "./layout/columnists.scss";
+@import "./layout/News";
+@import "./layout/podcast";
+@import "./layout/video";
 
 @import "./components/banner";
 @import "./components/cardSlide";
+@import "./components/cardHome";
 
 body {
   font-family: $font-primary !important;

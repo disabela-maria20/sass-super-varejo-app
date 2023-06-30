@@ -103,3 +103,30 @@
     font-size: 28px;
   }
 }
+
+@mixin linkArrow {
+  text-transform: capitalize;
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &::after {
+    content: "";
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    background: url(../../images/right.png);
+    width: 11px;
+    height: 8px;
+    top: 7px;
+    margin-left: 5px;
+  }
+  &:hover::after {
+    margin-left: 10px;
+  }
+}
+
+@mixin subTitleH2 {
+  font-size: 31px;
+  font-weight: 700;
+}
