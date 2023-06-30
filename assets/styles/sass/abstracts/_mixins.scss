@@ -94,3 +94,12 @@
     outline: none;
   }
 }
+
+@mixin subTitle {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  @include media(lg) {
+    font-size: 28px;
+  }
+}

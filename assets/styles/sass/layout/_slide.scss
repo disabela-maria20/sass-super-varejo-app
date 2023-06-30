@@ -1,0 +1,42 @@
+.slide {
+  padding: 45px 0;
+  position: relative;
+  @include media(lg) {
+    padding: 95px 0;
+  }
+  .owl-nav {
+    @include media(lg) {
+      position: absolute;
+      top: 45%;
+      z-index: 99;
+      width: 100%;
+    }
+
+    @include media(lg) {
+      display: block;
+
+      .owl-prev {
+        right: 51%;
+        position: relative;
+      }
+      .owl-next {
+        left: 51%;
+        position: relative;
+      }
+    }
+    button {
+      background-color: $secondary-colors !important;
+      color: $primary-lingh-color !important;
+      font-size: 28px !important;
+      width: 45px;
+      height: 45px;
+      border-radius: 45px !important;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  @include media(lg) {
+  }
+}

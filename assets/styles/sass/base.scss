@@ -3,8 +3,11 @@
 
 @import "./layout/menu";
 @import "./layout/footer";
+@import "./layout/slide";
+@import "./layout/magazine";
 
 @import "./components/banner";
+@import "./components/cardSlide";
 
 body {
   font-family: $font-primary !important;
