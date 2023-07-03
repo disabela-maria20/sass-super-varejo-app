@@ -32,7 +32,7 @@
     }
   }
   p {
-    @include paragraph($primary-lingh-color);
+    @include paragraph;
     font-weight: 200;
   }
   .magazine_link {

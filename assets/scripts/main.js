@@ -34,3 +34,21 @@ $(document).ready(function () {
     },
   });
 });
+
+function isDarkTheme() {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const imagem = document.querySelector(".logo");
+  if (isDarkTheme()) {
+    imagem.src = "./assets/images/logo-light.png";
+    imagem.srcset = "./assets/images/logo-light.png";
+  }
+});

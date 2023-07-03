@@ -17,4 +17,9 @@
 
 body {
   font-family: $font-primary !important;
+  background: getColor(primary-theme-color) !important;
+}
+
+:focus-within {
+  outline: none;
 }

@@ -5,7 +5,7 @@
         <div class="area_search">
           <input type="text" name="search" id="search" placeholder="Buscar" />
           <button>
-            <img src="./assets/images/lupa.png" alt="" />
+            <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
         <div class="link">
@@ -53,10 +53,10 @@
               ./assets/images/logo@0,55x.png 567w
             " class="logo" />
       <button class="btn-register">
-        <img src="./assets/images/profile-user@1,25x.png" alt="" srcset="" />
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
         <span>Cadastre-se | Faça Login</span>
       </button>
-      <div class="menu-burguer" role="button">
+      <div class="menu-burguer">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -64,7 +64,12 @@
       <ul class="list-unstyled">
         <li>
           <div class="area_search">
-            <input type="text" name="search" id="search" placeholder="Buscar" />
+            <div class="area_search">
+              <input type="text" name="search" id="search" placeholder="Buscar" />
+              <button>
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
           </div>
         </li>
         <li>
@@ -84,7 +89,7 @@
         </li>
         <li class="registered">
           <a href="">
-            <img src="./assets/images/profile-user@1,25x.png" alt="" srcset="" />
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
             <span>Cadastre-se | Faça Login</span>
           </a>
         </li>

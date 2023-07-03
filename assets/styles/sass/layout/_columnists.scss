@@ -24,9 +24,11 @@
       }
       h5 {
         font-weight: 700;
+        color: getColor(primary-theme-colors-reverse);
       }
       p {
-        @include paragraph($dark-colos);
+        @include paragraph;
+        opacity: 0.8;
       }
     }
   }

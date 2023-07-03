@@ -31,7 +31,7 @@
 }
 
 @mixin input {
-  background-color: $secondary-lingh-color;
+  background-color: getColor(secondary-theme-color);
   color: $tertiary-lingh-color;
   border: none;
   height: 42px;
@@ -44,11 +44,25 @@
   &:focus-within {
     outline-width: 2px;
     outline-style: solid;
-    outline-color: $tertiary-lingh-color;
+    outline-color: getColor(tertiary-theme-color);
   }
   &::placeholder {
     font-weight: 600;
   }
+  @include media(md) {
+    font-size: 18px;
+  }
+}
+@mixin linksMenu {
+  color: getColor(primary-theme-colors-reverse);
+  font-weight: 900;
+  font-size: 15px;
+  transition: opacity 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.6;
+  }
+
   @include media(md) {
     font-size: 18px;
   }
@@ -69,9 +83,9 @@
   }
 }
 
-@mixin paragraph($color) {
+@mixin paragraph {
   font-size: 15px;
-  color: $color;
+  color: getColor(primary-theme-colors-reverse);
   font-weight: 400;
   @include media(lg) {
     font-size: 18px;
@@ -100,6 +114,7 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
+  color: getColor(primary-theme-colors-reverse);
   @include media(lg) {
     font-size: 28px;
   }
@@ -130,4 +145,5 @@
 @mixin subTitleH2 {
   font-size: 31px;
   font-weight: 700;
+  color: getColor(primary-theme-colors-reverse);
 }
