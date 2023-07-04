@@ -46,6 +46,7 @@
                 color: getColor(tertiary-theme-colors-reverse);
                 &:hover {
                   opacity: 1;
+                  color: getColor(tertiary-theme-colors-reverse) !important;
                   background-color: getColor(tertiary-theme-color);
                 }
               }
@@ -166,6 +167,9 @@
           border-radius: $border-radius;
           img {
             margin-right: 10px;
+          }
+          &:hover {
+            background-color: darken($secondary-colors, 10%);
           }
         }
       }

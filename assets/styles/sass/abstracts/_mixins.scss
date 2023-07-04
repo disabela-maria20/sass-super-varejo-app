@@ -57,10 +57,10 @@
   color: getColor(primary-theme-colors-reverse);
   font-weight: 900;
   font-size: 15px;
-  transition: opacity 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
   text-decoration: none;
   &:hover {
-    opacity: 0.6;
+    color: $primary-colors;
   }
 
   @include media(md) {
