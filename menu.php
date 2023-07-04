@@ -85,7 +85,7 @@
           <a href="">Especial do Mês</a>
         </li>
         <li>
-          <a href=""> APAS SHOE</a>
+          <a href=""> APAS SHOW</a>
         </li>
         <li class="registered">
           <a href="">

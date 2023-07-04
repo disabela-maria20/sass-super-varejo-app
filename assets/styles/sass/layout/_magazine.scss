@@ -32,7 +32,12 @@
     }
   }
   p {
-    @include paragraph;
+    font-size: 15px;
+    color: $primary-lingh-color;
+    font-weight: 400;
+    @include media(lg) {
+      font-size: 18px;
+    }
     font-weight: 200;
   }
   .magazine_link {

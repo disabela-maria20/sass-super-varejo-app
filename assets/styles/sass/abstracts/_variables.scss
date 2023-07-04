@@ -13,8 +13,29 @@ $quaternary-indigo-colos: #201a46;
 $danger-color: #d62b2b;
 $podcast-color: #1ed760;
 
-//defining scss variable
-//light theme
+$primary-colors: #beba33;
+$primary-lingh-color: #fff;
+$secondary-colors: #701ea9;
+$primary-lingh-colors: #e4e4e4;
+$secondary-lingh-color: #e5e5e5;
+$tertiary-lingh-color: #b4b4b4;
+$dark-colos: #000000;
+$quaternary-indigo-colos: #201a46;
+$danger-color: #d62b2b;
+$podcast-color: #1ed760;
+
+// Color
+$primary-colors: #beba33;
+$primary-lingh-color: #fff;
+$secondary-colors: #701ea9;
+$primary-lingh-colors: #e4e4e4;
+$secondary-lingh-color: #e5e5e5;
+$tertiary-lingh-color: #b4b4b4;
+$dark-colos: #000000;
+$quaternary-indigo-colos: #201a46;
+$danger-color: #d62b2b;
+$podcast-color: #1ed760;
+
 $colors: (
   primary-theme-color: #ffffff,
   primary-theme-colors: #e4e4e4,
@@ -25,7 +46,7 @@ $colors: (
   primary-theme-colors-reverse: #000,
   tertiary-theme-colors-reverse: #000,
 );
-//dark theme
+
 $colors-dark: (
   primary-theme-color: #000000,
   primary-theme-colors: #1b1b1b,
@@ -36,25 +57,12 @@ $colors-dark: (
   primary-theme-colors-reverse: #fff,
   tertiary-theme-colors-reverse: #d4d4d4,
 );
-//converting scss variable into css variable
-:root {
-  @each $name, $color in $colors {
-    --color-#{$name}: #{$color};
-  }
-  --theme: "light";
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    @each $name, $color in $colors-dark {
-      --color-#{$name}: #{$color};
-    }
-    --theme: "dark";
-  }
-}
-//creating a function to get color instead of using css varible
+$theme: "dark";
+
 @function getColor($color-name) {
-  @return var(--color-#{$color-name});
+  $color-map: if($theme == "light", $colors, $colors-dark);
+  @return map-get($color-map, $color-name);
 }
 
 // Breakpoints

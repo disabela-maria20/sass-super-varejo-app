@@ -35,20 +35,26 @@ $(document).ready(function () {
   });
 });
 
-function isDarkTheme() {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-}
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const imagem = document.querySelector(".logo");
-  if (isDarkTheme()) {
+  if (
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html"
+  ) {
+    const savedTheme = localStorage.getItem("theme");
     imagem.src = "./assets/images/logo-light.png";
     imagem.srcset = "./assets/images/logo-light.png";
+
+    if (savedTheme) {
+      // Se o tema foi definido anteriormente, aplica-o
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      // Caso contrário, define o tema dark por padrão
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    }
+  } else {
+    imagem.src = "./assets/images/logo.png";
+    imagem.srcset = "./assets/images/logo.png";
   }
 });
