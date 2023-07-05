@@ -1,0 +1,221 @@
+.news_lacquers {
+  h1 {
+    @include Title;
+    margin: 55px 0 35px;
+
+    text-align: center;
+    @include media(md) {
+      margin: 90px 0 45px;
+    }
+  }
+
+  .card_slide_news_lacquers {
+    display: grid;
+    background-color: $secondary-colors;
+    color: $primary-lingh-color;
+    border-radius: $border-radius;
+    overflow: auto;
+    margin-bottom: 45px;
+
+    @include media(md) {
+      margin-bottom: 55px;
+    }
+    @include media(md) {
+      grid-template-columns: 1.2fr 1fr;
+      align-items: stretch;
+      align-content: space-between;
+    }
+    .card_news_lacquers_info {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 20px;
+
+      .card_badge {
+        padding: 3px 10px;
+        border-radius: 5px;
+      }
+      h2 {
+        color: $primary-lingh-color !important;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 20px 0 40px;
+        font-weight: 700 !important;
+
+        @include media(md) {
+          font-size: 28px;
+        }
+        @include media(lg) {
+          font-size: 35px;
+        }
+      }
+      a {
+        color: $primary-lingh-color;
+        font-weight: 400;
+        @include linkArrow();
+      }
+    }
+  }
+}
+
+.new_filter {
+  margin-bottom: 35px;
+
+  @include media(md) {
+    margin-bottom: 45px;
+  }
+  .area_filter {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+
+    @include media(md) {
+      grid-template-columns: 1fr 1.2fr;
+    }
+    select {
+      @include input;
+    }
+  }
+}
+
+.card_news_list {
+  display: grid;
+  border-radius: $border-radius;
+  overflow: auto;
+  margin-bottom: 25px;
+
+  @include media(md) {
+    margin-bottom: 35px;
+  }
+  @include media(md) {
+    grid-template-columns: 0.7fr 1fr;
+    align-items: stretch;
+    align-content: space-between;
+  }
+  img {
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+  .card_news_list_info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 20px;
+    @include media(md) {
+      padding: 20px;
+    }
+
+    .card_badge {
+      padding: 3px 10px;
+      border-radius: 5px;
+      color: $primary-lingh-color;
+    }
+    h2 {
+      color: getColor(primary-theme-colors-reverse);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.2;
+      font-weight: 700 !important;
+      margin-top: 20px;
+      @include media(md) {
+        font-size: 28px;
+      }
+      @include media(lg) {
+        font-size: 35px;
+      }
+    }
+    p {
+      @include paragraph;
+    }
+    a {
+      color: $secondary-colors !important;
+      font-weight: 600;
+      @include linkArrow();
+      &::after {
+        background-image: url("../../images/right-purple.png");
+      }
+      &:hover {
+        color: $secondary-colors !important;
+      }
+    }
+  }
+}
+
+.btn-loading {
+  border: none;
+  background-color: transparent;
+
+  i {
+    font-size: 30px;
+  }
+}
+
+.news_most_read {
+  margin-bottom: 45px;
+
+  @include media(md) {
+    margin-bottom: 55px;
+  }
+  h2 {
+    @include Title;
+    margin: 55px 0 35px;
+    @include media(md) {
+      margin: 90px 0 45px;
+    }
+  }
+
+  .card_slide_most_read {
+    display: grid;
+    border: 1px solid getColor(secondary-theme-color) !important;
+    background-color: getColor(primary-theme-color) !important;
+    border-radius: 10px !important;
+    overflow: auto;
+    color: getColor(primary-theme-colors-reverse);
+    border-radius: $border-radius;
+
+    @include media(lg) {
+      grid-template-columns: 0.6fr 1fr;
+      align-items: stretch;
+      align-content: space-between;
+    }
+    img {
+      object-fit: cover;
+    }
+    .card_most_read_info {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 20px;
+
+      .card_badge {
+        padding: 3px 10px;
+        border-radius: 5px;
+        color: $primary-lingh-color;
+      }
+      h2 {
+        color: getColor(primary-theme-colors-reverse);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 20px 0 40px;
+        font-weight: 700 !important;
+
+        @include media(lg) {
+          font-size: 22px;
+        }
+      }
+      a {
+        color: $secondary-colors !important;
+        font-weight: 600;
+        @include linkArrow();
+        &::after {
+          background-image: url("../../images/right-purple.png");
+        }
+        &:hover {
+          color: $secondary-colors !important;
+        }
+      }
+    }
+  }
+}

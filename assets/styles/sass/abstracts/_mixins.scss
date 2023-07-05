@@ -147,3 +147,21 @@
   font-weight: 700;
   color: getColor(primary-theme-colors-reverse);
 }
+
+@mixin Title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: getColor(primary-theme-colors-reverse);
+  @include media(lg) {
+    font-size: 38px;
+  }
+}
+
+$cores: (#a06253, #48a9c2, #4b0082, #07dbfd, #b22222);
+
+@for $i from 1 through length($cores) {
+  .card_badge-#{$i} {
+    background-color: nth($cores, $i);
+  }
+}
