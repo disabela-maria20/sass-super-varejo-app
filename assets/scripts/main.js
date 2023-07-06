@@ -40,3 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const categoriaAtual = window.location.pathname.split("/")[2];
+  document.documentElement.classList.add(
+    "categoria",
+    `categoria-${categoriaAtual}`
+  );
+});

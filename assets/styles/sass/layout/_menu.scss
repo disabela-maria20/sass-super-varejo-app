@@ -62,7 +62,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    img.logo {
+
+    @include media(lg) {
+      justify-content: center;
+    }
+    a img.logo {
       max-width: 220px;
       @include media(lg) {
         margin: 0px auto;

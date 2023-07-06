@@ -28,10 +28,7 @@
       }
 
       .logo {
-        width: 160px;
-        @include media(lg) {
-          width: 260px;
-        }
+        width: 100%;
       }
       h5 {
         font-size: 18px;
