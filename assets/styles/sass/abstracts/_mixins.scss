@@ -95,7 +95,7 @@
 @mixin cta {
   background-color: $primary-colors;
   color: $primary-lingh-color;
-  border-radius: $border-radius;
+  border-radius: 5px;
   padding: 5px 20px;
   transition: background-color 0.2s ease-in-out;
   border: none;

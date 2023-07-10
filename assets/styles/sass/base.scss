@@ -12,6 +12,7 @@
 
 @import "./pages/page_news";
 @import "./pages/newsViews";
+@import "./pages/edicoes";
 
 @import "./components/banner";
 @import "./components/cardSlide";
@@ -23,6 +24,7 @@ body {
   background: getColor(primary-theme-color) !important;
 }
 
-:focus-within {
+:focus-within,
+:focus {
   outline: none !important;
 }
