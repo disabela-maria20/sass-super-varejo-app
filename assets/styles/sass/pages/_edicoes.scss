@@ -24,8 +24,10 @@
     .tabs_download {
       display: grid;
       gap: 20px 30px;
+      margin-bottom: 45px;
       @include media(sm) {
         grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 90px;
       }
       @include media(lg) {
         grid-template-columns: repeat(4, 1fr);

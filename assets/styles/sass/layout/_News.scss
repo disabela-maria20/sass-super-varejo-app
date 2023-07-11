@@ -12,7 +12,6 @@
     margin-bottom: 45px;
     @include media(md) {
       grid-template-columns: 1fr 1fr;
-      margin-bottom: 90px;
     }
     @include media(lg) {
       grid-template-columns: repeat(4, 1fr);

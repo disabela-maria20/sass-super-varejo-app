@@ -165,3 +165,11 @@ $cores: (#a06253, #48a9c2, #4b0082, #07dbfd, #b22222);
     background-color: nth($cores, $i);
   }
 }
+
+$cores-badge-bg: (#b9bda4, #48a9c2, #b22222);
+
+@for $i from 1 through length($cores-badge-bg) {
+  .bg_badge-#{$i} {
+    background-color: nth($cores-badge-bg, $i);
+  }
+}
