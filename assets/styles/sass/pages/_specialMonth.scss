@@ -1,0 +1,61 @@
+h1.special_title {
+  @include Title();
+  text-align: center;
+  margin: 35px 0;
+}
+
+.special {
+  background-color: $medium-blue;
+
+  .special_area {
+    display: grid;
+    gap: 20px;
+    padding: 45px 0;
+    @include media(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card_vertical {
+      background-color: $medium-dark-blue !important;
+      border: {
+        color: $medium-dark-blue !important;
+      }
+      padding: 20px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: $gray-color !important;
+        border-color: transparent !important;
+      }
+      img {
+        max-width: 170px;
+        object-fit: contain;
+        @include media(lg) {
+          max-width: 220px;
+        }
+      }
+
+      .card-body {
+        padding: 0;
+        p {
+          margin: 25px 0;
+          color: $primary-lingh-color !important;
+          @include paragraph;
+          &::after {
+            content: none;
+          }
+        }
+        a {
+          background-color: $primary-lingh-color !important;
+          color: $dark-colos !important;
+          &::after {
+            content: none;
+          }
+          padding: 5px 10px;
+          border-radius: 5px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
