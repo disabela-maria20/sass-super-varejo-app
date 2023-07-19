@@ -1,0 +1,190 @@
+.about {
+  h1 {
+    text-align: center;
+    @include Title;
+    margin-bottom: 45px;
+  }
+  .about_area {
+    .bg_about {
+      background-color: getColor(secondary-theme-color);
+      padding: 20px;
+      border-radius: $border-radius;
+
+      @include media(md) {
+        padding: 45px;
+      }
+      h2 {
+        @include subTitle;
+        margin-top: 25px;
+      }
+      p {
+        @include paragraph;
+        @include media(xl) {
+          font-size: 22px;
+        }
+      }
+      .area_img {
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: $border-radius;
+        }
+      }
+    }
+    h2 {
+      @include subTitle;
+      margin: 45px 0;
+    }
+    ul {
+      > li {
+        position: relative;
+        margin-bottom: 20px;
+        &::before {
+          content: "🡲";
+          position: absolute;
+          right: 5px;
+          top: 30px;
+          padding: 2px;
+          background: $primary-colors;
+          width: 30px;
+          height: 20px;
+          font-size: 12px;
+          color: $primary-lingh-color;
+          border-radius: 8px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.2s ease-in-out;
+
+          @include media(md) {
+            right: 20px;
+            top: 2px;
+          }
+        }
+        &:hover::before {
+          background-color: $secondary-colors;
+        }
+        > a {
+          @include links;
+          position: relative;
+
+          &:hover {
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+    .about_paragraph {
+      background-color: $secondary-colors;
+      color: $primary-lingh-color;
+      border-radius: $border-radius;
+      padding: 20px;
+      @include media(md) {
+        padding: 45px;
+      }
+    }
+  }
+}
+
+.about_views_contact {
+  margin: 45px 0;
+  padding: 45px 0;
+  background: #4a81c6;
+
+  @include media(md) {
+    margin: 90px 0;
+  }
+  h2 {
+    @include Title;
+    color: $primary-lingh-color;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  input,
+  textarea {
+    background-color: #c1d1e4;
+    color: #000001;
+    border: none;
+    height: 42px;
+    width: 100%;
+    border-radius: $border-radius;
+    padding: 0 15px;
+    font-size: 15px;
+
+    &:focus-within {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: getColor(secondary-theme-color);
+    }
+    &::placeholder {
+      color: #000001;
+    }
+    @include media(md) {
+      font-size: 18px;
+    }
+  }
+  textarea {
+    height: 150px;
+    padding-top: 10px;
+  }
+  button {
+    @include cta;
+  }
+}
+
+.about_nav_botton {
+  margin-bottom: 45px;
+  @include media(md) {
+    margin-bottom: 90px;
+  }
+  @include media(lg) {
+    margin-bottom: 120px;
+  }
+  ul {
+    display: grid;
+    gap: 20px;
+
+    @include media(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    li {
+      height: 100%;
+      div {
+        img {
+          width: 100%;
+          display: block;
+          height: 300px;
+          margin: 0 auto;
+          object-fit: contain;
+        }
+        a {
+          @include cta;
+          width: 100%;
+          display: block;
+          text-align: center;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            background-color: getColor(secondary-theme-color);
+            height: 170px;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            border-radius: $border-radius $border-radius 0 0;
+            z-index: -1;
+            bottom: 31px;
+          }
+        }
+      }
+    }
+  }
+}
