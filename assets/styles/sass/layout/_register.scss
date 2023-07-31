@@ -1,0 +1,143 @@
+.register {
+  .title {
+    text-align: center;
+    margin-bottom: 45px;
+
+    h1 {
+      @include Title;
+    }
+
+    p {
+      @include paragraph;
+    }
+  }
+
+  form {
+    div {
+      label {
+        display: block;
+
+        span {
+          position: absolute;
+          top: -9999px;
+        }
+
+        input {
+          @include input;
+        }
+      }
+    }
+
+    h2 {
+      @include Title;
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    p {
+      @include paragraph;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .interests {
+      background-color: $dark-colos;
+      border-radius: $border-radius;
+
+      .area_interests {
+        margin: 0 auto;
+        max-width: 850px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 45px 0;
+
+        .btn_interests {
+          background-color: transparent;
+          color: $primary-lingh-color;
+          border: 2px solid $primary-lingh-color;
+          padding: 10px 20px;
+          border-radius: 10px;
+          transition: background-color 0.2s ease-in-out;
+          font-weight: 700;
+          margin: 10px;
+
+          &.active {
+            background-color: $secondary-colors;
+            border-color: transparent;
+          }
+        }
+      }
+    }
+
+    .notifications {
+      .area_notifications {
+        display: grid;
+        justify-content: center;
+
+        .custom-control-input:checked~.custom-control-label::before {
+          color: #fff;
+          border-color: $secondary-colors;
+          background-color: $secondary-colors;
+
+          &:focus {
+            border: none !important;
+            outline: none !important;
+          }
+        }
+
+        .custom-control-input:not(:disabled):active~.custom-control-label::before {
+          border: none !important;
+          background-color: #666666 !important;
+        }
+
+        .custom-control-input:focus~.custom-control-label::before {
+          box-shadow: none !important;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      @include cta;
+      color: $dark-colos;
+
+      font: {
+        size: 22px;
+        weight: 700;
+      }
+
+      &:hover {
+        color: $dark-colos;
+      }
+    }
+
+    .privacy_policy {
+      background-color: getColor(secondary-theme-color);
+      padding: 25px;
+      border-radius: $border-radius;
+      margin: 45px 0;
+
+      @include media(md){
+        margin-bottom: 90px;
+      }
+      .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: $secondary-colors;
+        background-color: $secondary-colors;
+
+        &:focus {
+          border: none !important;
+          outline: none !important;
+        }
+      }
+
+      .custom-control-input:not(:disabled):active~.custom-control-label::before {
+        border: none !important;
+        background-color: #666666 !important;
+      }
+
+      .custom-control-input:focus~.custom-control-label::before {
+        box-shadow: none !important;
+      }
+    }
+  }
+}

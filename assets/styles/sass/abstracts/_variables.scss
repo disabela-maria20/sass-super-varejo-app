@@ -23,6 +23,7 @@ $colors: (
   primary-dark-theme-color: var(--dark-colos, #000000),
   primary-theme-colors-reverse: var(--quaternary-indigo-colos, #000),
   tertiary-theme-colors-reverse: var(--danger-color, #000),
+  quaternary-gray-color: var(--quaternary-gray-color, #fafafa)
 );
 //dark theme
 $colors-dark: (
@@ -34,6 +35,7 @@ $colors-dark: (
   primary-dark-theme-color: var(--primary-dark-theme-color, #1a1a1a),
   primary-theme-colors-reverse: var(--primary-theme-colors-reverse, #fff),
   tertiary-theme-colors-reverse: var(--tertiary-theme-colors-reverse, #d4d4d4),
+  quaternary-gray-color: var(--quaternary-gray-color, #333333)
 );
 :root {
   @each $name, $color in $colors {
@@ -69,3 +71,53 @@ $font-secondary: "din-2014", sans-serif;
 
 // Border Radius
 $border-radius: 10px;
+
+
+
+$cores-categorias: (
+  ("apas-show", #b4c6e7),
+  ("economia", #d8d8d8),
+  ("gestão", #fa5458),
+  ("indústria", #f4b083),
+  ("publieditorial", #b4c6e7),
+  ("varejo", #ff3737),
+  ("ESG", #000),
+  ("tecnologia", #7030A0),
+  ("lançamentos", #000),
+  ("artigo", #8eaadb),
+  ("marketing", #4ed6e8),
+  ("exclusivo", #000)
+);
+
+@function obter-cor-por-categoria($categoria) {
+  @each $item in $cores-categorias {
+    $nome-categoria: nth($item, 1);
+    $cor-categoria: nth($item, 2);
+    
+    @if ($nome-categoria == $categoria) {
+      @return $cor-categoria;
+    }
+  }
+  
+  @warn "Categoria '#{$categoria}' não encontrada no array.";
+  @return null; 
+}
+
+
+@each $item in $cores-categorias {
+  $nome-categoria: nth($item, 1);
+  $cor-categoria: nth($item, 2);
+  
+  .bg-#{$nome-categoria} {
+    background-color: $cor-categoria;
+    .owl-nav button {
+      background-color: $cor-categoria !important;
+    }
+    .card_badge{
+      background-color: $cor-categoria;
+    }
+    .card_slide_news_lacquers{
+      background-color: $cor-categoria !important;
+    }
+  }
+}
