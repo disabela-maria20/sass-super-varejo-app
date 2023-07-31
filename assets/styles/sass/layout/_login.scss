@@ -1,0 +1,71 @@
+.login {
+	.title {
+		text-align: center;
+		margin-bottom: 45px;
+
+		h1 {
+			@include Title;
+		}
+
+	}
+
+	.form_login {
+		background-color: getColor(quaternary-gray-color);
+		padding: 30px;
+		width: min(650px, 100%);
+		margin: 0 auto;
+		margin-bottom: 45px;
+		@include media(md){
+			margin-bottom: 90px;
+			
+		}
+		label {
+			display: block;
+
+			span {
+				position: absolute;
+				visibility: hidden;
+			}
+
+			input {
+				@include input;
+			}
+
+		}
+
+		button[type="submit"] {
+			@include cta;
+			padding:10px 20px;
+			font-size: 18px;
+			border-radius: 10px;
+		}
+		.link{
+			background-color: $secondary-colors;
+			color: $primary-lingh-color;
+			border-radius: 10px;
+			padding: 10px 20px;
+			transition: background-color 0.2s ease-in-out;
+			border: none;
+		
+			&:hover {
+				color: $primary-lingh-color;
+				text-decoration: none;
+				background-color: darken($secondary-colors, 10%);
+			}
+			&:focus-within {
+				outline: none;
+			}
+			font-size: 18px;
+		
+		}
+		p {
+			text-align: center;
+			@include paragraph;
+
+			a {
+				@include linksMenu;
+			}
+
+		}
+	}
+}
