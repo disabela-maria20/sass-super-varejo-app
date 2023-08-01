@@ -67,11 +67,11 @@
       justify-content: center;
     }
     a img.logo {
-      max-width: 220px;
+      max-width: 170px;
       @include media(lg) {
         margin: 0px auto;
         display: block;
-        width: 400px;
+        width: 320px;
         max-width: initial;
       }
     }
