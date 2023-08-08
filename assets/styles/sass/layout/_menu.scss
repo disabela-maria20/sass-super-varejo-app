@@ -75,12 +75,13 @@
         max-width: initial;
       }
     }
-    .btn-register {
+    a.btn-register {
       background-color: getColor(primary-theme-color);
       border: 2px solid getColor(primary-theme-colors-reverse);
       padding: 12px 20px;
       border-radius: $border-radius;
       display: none;
+      text-decoration: none !important;
       @include media(lg) {
         display: block;
         position: absolute;

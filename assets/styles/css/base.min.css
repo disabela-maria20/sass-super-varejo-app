@@ -517,27 +517,28 @@
     max-width: initial;
   }
 }
-.header .area_logo .btn-register {
+.header .area_logo a.btn-register {
   background-color: var(--color-primary-theme-color);
   border: 2px solid var(--color-primary-theme-colors-reverse);
   padding: 12px 20px;
   border-radius: 10px;
   display: none;
+  text-decoration: none !important;
 }
 @media (min-width: 992px) {
-  .header .area_logo .btn-register {
+  .header .area_logo a.btn-register {
     display: block;
     position: absolute;
     top: -35px;
     right: 0;
   }
 }
-.header .area_logo .btn-register span {
+.header .area_logo a.btn-register span {
   color: var(--color-primary-theme-colors-reverse);
   font-size: 15px;
   margin-left: 10px;
 }
-.header .area_logo .btn-register i {
+.header .area_logo a.btn-register i {
   color: var(--color-primary-theme-colors-reverse);
   font-size: 20px;
 }
