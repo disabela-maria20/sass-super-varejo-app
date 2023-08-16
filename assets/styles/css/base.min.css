@@ -921,10 +921,12 @@ footer .footer_copyright p {
     padding: 95px 0;
   }
 }
+.owl-nav {
+  z-index: -1;
+}
 @media (min-width: 992px) {
   .owl-nav {
     position: absolute;
-    z-index: 99;
     width: 100%;
     display: flex !important;
     justify-content: center;
