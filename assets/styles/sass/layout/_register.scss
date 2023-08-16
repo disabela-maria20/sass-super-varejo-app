@@ -49,6 +49,7 @@
         max-width: 850px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding: 45px 0;
 
         .btn_interests {
@@ -116,9 +117,10 @@
       border-radius: $border-radius;
       margin: 45px 0;
 
-      @include media(md){
+      @include media(md) {
         margin-bottom: 90px;
       }
+
       .custom-control-input:checked~.custom-control-label::before {
         color: #fff;
         border-color: $secondary-colors;
