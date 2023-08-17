@@ -27,8 +27,20 @@
         color: getColor(primary-theme-colors-reverse);
       }
       p {
-        @include paragraph;
-        opacity: 0.8;
+        font-size: 14px;
+        line-height: 1.5;
+        color: getColor(tertiary-theme-colors-reverse);
+
+        a {
+          color: $secondary-colors !important;
+          cursor: pointer;
+          transition: color 0.2s ease-in-out;
+          &:hover {
+            color: saturate($secondary-colors, 50%) !important; // #e05299
+
+            // color: saturation($secondary-colors);
+          }
+        }
       }
     }
   }

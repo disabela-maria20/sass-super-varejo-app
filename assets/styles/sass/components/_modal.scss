@@ -1,0 +1,15 @@
+.area_modal {
+  .modal-content {
+    background-color: getColor(tertiary-theme-color);
+    color: getColor(primary-theme-colors-reverse);
+    .modal-header {
+      border: transparent !important;
+    }
+    .modal-footer {
+      border: transparent !important;
+    }
+    .close {
+      color: getColor(primary-theme-colors-reverse);
+    }
+  }
+}
