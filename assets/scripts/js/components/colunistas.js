@@ -68,7 +68,7 @@ export function Colunistas() {
         for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
             var cols = data_1[_i];
             PutModal(cols);
-            columnists_grid.innerHTML += "\n        <div class=\"media container_area\">\n          <div class=\"container_img\">\n            <img src=\"./assets/images/square.png\" class=\"mr-3\" alt=\"...\">\n          </div>\n          <div class=\"media-body\">\n            <h5 class=\"mt-0\">".concat(cols.name, "</h5>\n            <p>").concat(cols.textMin, " <a data-toggle=\"modal\" data-target=\"#ModalLong-").concat(cols.id, "\">leia mais</a></p>\n          </div>\n        </div>\n      ");
+            columnists_grid.innerHTML += "\n        <div class=\"media container_area\">\n          <div class=\"container_img\">\n            <img src=\"./assets/images/970X250_(100_×_100_px).png\" class=\"mr-3\" alt=\"...\">\n          </div>\n          <div class=\"media-body\">\n            <h5 class=\"mt-0\">".concat(cols.name, "</h5>\n            <p>").concat(cols.textMin, " <a data-toggle=\"modal\" data-target=\"#ModalLong-").concat(cols.id, "\">leia mais</a></p>\n          </div>\n        </div>\n      ");
             modals[cols.id] = cols;
         }
     };

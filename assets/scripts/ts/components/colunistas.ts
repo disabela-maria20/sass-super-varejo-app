@@ -31,7 +31,7 @@ export function Colunistas() {
       columnists_grid.innerHTML += `
         <div class="media container_area">
           <div class="container_img">
-            <img src="./assets/images/square.png" class="mr-3" alt="...">
+            <img src="./assets/images/970X250_(100_×_100_px).png" class="mr-3 rounded" alt="...">
           </div>
           <div class="media-body">
             <h5 class="mt-0">${cols.name}</h5>
