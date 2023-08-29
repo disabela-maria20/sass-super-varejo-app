@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Pedro Della Nora",
+    "textMin": "Supermercadista há 16 anos e dono de duas lojas da rede...",
+    "textModal": "Pedro Della Nora é supermercadista há 16 anos e dono de duas lojas da rede Ideal Supermercados, no Paraná. Além de varejista, o executivo é produtor de conteúdo e mentor de supermercadistas para ensinar como aumentar as vendas e o lucro independentemente do tamanho ou da concorrência.",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Fabrícia Botelho",
+    "textMin": "Consultora de inovação e foresight estratégico...",
+    "textModal": "Fabrícia Botelho é consultora de inovação e foresight estratégico, palestrante e facilitadora. Formada em propaganda e marketing pelo Mackenzie e pós-graduada em marketing pelo Insper. Mais de vinte anos de carreira na área de marketing promocional e live marketing. Membro da WSFS – World Futures Studies Federation. Certified Innovation Professional – Global Innovation Management Institute. Na última década tem se dedicado ao estudo de metodologias de inovação e estudo de futuros e feito projetos nessas áreas para vários clientes através da FABBO Futuros.",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Kátia Bello",
+    "textMin": "CEO da OpusDesign, arquiteta formada pela FAU-USP...",
+    "textModal": "Kátia Bello é CEO da OpusDesign, arquiteta formada pela FAU-USP, pós-graduada em neuromarketing pela Psicosoma/Inova Portugal-Brasil, especialista em arquitetura comercial com cursos de Marketing de Varejo pela ESPM e Gestão Operacional de Varejo pela FEA-USP. Kátia atua há 32 anos exclusivamente no varejo, com carreira reconhecia internacionalmente através de 7 prêmios de retail design. ",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Antônio Sá",
+    "textMin": "Larga experiência como executivo do varejo...",
+    "textModal": "School e Saint Paul Escola de Negócios. Com larga experiência como executivo do varejo, trabalhou no maior supermercadista do Brasil, Grupo Pão de Açúcar, e no maior supermercadista do mundo, Walmart, atuando por último como Diretor de Marcas Próprias no Walmart e tendo atuado também na área comercial e de marketing. É Sócio-Fundador da Amicci – empresa especialista em Desenvolvimento & Gestão de Marcas Próprias para o Varejo. É Administrador, pós-graduado pela Fundação Getúlio Vargas (FGV) de São Paulo, com extensão em Marketing, Gestão Estratégica de Negócios, Diagnóstico e Reorientação de Empresas e Gestão Estratégica de Operações.",
+    "image": ""
+  }
+]
